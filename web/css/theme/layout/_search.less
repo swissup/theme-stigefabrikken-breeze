@@ -1,0 +1,31 @@
+// Minisearch
+
+@minisearch-button__background-color: @color-red;
+@minisearch-button__text-color: @white;
+@minisearch-button__focus__background-color: @color-red;
+& when (@critical) {
+    #search_mini_form { 
+        .control {
+            .input-text {
+                width: 480px;
+                height: 52px;
+                border-radius: 50px;
+                background-color: @color-almost-white;
+                border-color: @color-border-gray;
+            }
+        }
+        .actions {
+            .action.search {
+                background-color: @color-red !important;
+                margin-left: -3rem;
+                width: 40px;
+                height: 40px;
+                border-radius: 50px !important;
+                
+                &::before {
+                    background-color: @color-white;
+                }
+            }
+        }
+    }
+}

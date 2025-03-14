@@ -1,0 +1,27 @@
+@header-panel__background: @color-almost-white ;
+
+.header.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+
+    height: 90px;
+
+    a.logo { margin-right: auto; }
+    .block-search { 
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30%; 
+    }
+    .switcher .account-dropdown,
+    .minicart-wrapper {
+        .action{
+            &::before {
+                -webkit-mask-size: @header-actions-icon__width @header-actions-icon__height;
+                background-color: @color-gray-icon;
+            }
+        }
+    }
+}

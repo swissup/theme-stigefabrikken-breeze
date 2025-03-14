@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Set default logo dimensions. 2.4.3 fixes config values: https://github.com/magento/magento2/commit/e1aaf74d2eebfb54a152d857dcd2934a3eb79bf8 -->
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">228</argument>
+                <argument name="logo_img_height" xsi:type="number">48</argument>
+                <argument name="logo_width" xsi:type="number">228</argument>
+                <argument name="logo_height" xsi:type="number">48</argument>
+            </arguments>
+        </referenceBlock>
+        
+        <!-- Remove wishlist sidebar -->
+        <referenceBlock name="header.wishlist" remove="true" />
+    </body>
+</page>
