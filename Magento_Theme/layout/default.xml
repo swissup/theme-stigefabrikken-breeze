@@ -12,6 +12,22 @@
             </arguments>
         </referenceBlock>
         
+        <!-- Add CMS block to panel header -->
+        <referenceContainer name="header.panel">
+            <block class="Magento\Cms\Block\Block" name="header_panel_offers">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_panel_offers</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="header_panel_links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_panel_links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        
+        <!-- Remove store switcher from header panel -->
+        <referenceBlock name="store_language" remove="true" />
         <!-- Remove wishlist sidebar -->
         <referenceBlock name="header.wishlist" remove="true" />
     </body>
