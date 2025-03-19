@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <packages>
+        <package>swissup/argento-breeze</package>
+        <package>swissup/stigefabrikken-breeze</package>
+    </packages>
+
+    <fields>
+        <field name="theme" title="Select Theme">
+            <option title="Stigefabrikken Breeze">swissup/stigefabrikken-breeze</option>
+        </field>
+    </fields>
+
+    <commands>
+        <conditions>
+            <param name="theme">swissup/stigefabrikken-breeze</param>
+        </conditions>
+        <!-- <include path="commands/config.xml"/> -->
+        <include path="commands/cms_block.xml"/>
+        <include path="commands/cms_page.xml"/>
+        <!-- <include path="commands/easytabs.xml"/>
+        <include path="commands/navigationpro.xml"/>
+        <include path="commands/testimonials.xml"/>
+        <include path="commands/widget.xml"/>
+        <include path="commands/resources.xml"/> -->
+    </commands>
+</config>

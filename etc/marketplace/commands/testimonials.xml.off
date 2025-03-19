@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <command class="Swissup\Testimonials\Installer\Command\Testimonials" module="Swissup_Testimonials">
+        <data>
+            <item>
+                <item name="name">Brenda Johnson</item>
+                <item name="email">brenda@example.com</item>
+                <item name="image">testimonials-1.jpg</item>
+                <item name="message">I absolutely love shopping at Argentochic! Their trendy selection, quality, and customer service are unparalleled. I've found the perfect outfits for every occasion. It's my go-to destination for fashion-forward, affordable clothing. I highly recommend Argentochic to all fashion enthusiasts!</item>
+            </item>
+            <item>
+                <item name="name">Missy Anderson</item>
+                <item name="email">missy@example.com</item>
+                <item name="image">testimonials-2.jpg</item>
+                <item name="message">I couldn't have got a better outfit - this cream silk lehenga was contemporary yet had a rich traditional feel - something that only argentochic can create!</item>
+            </item>
+            <item>
+                <item name="name">Jack Rain</item>
+                <item name="email">jack@example.com</item>
+                <item name="image">testimonials-3.jpg</item>
+                <item name="message">Shopping at Argentochic is a fashionista's dream come true! Their collection is not just stylish, but it's also affordable. I can always count on finding the latest trends, and their customer service is exceptional. Argentochic is my ultimate fashion destination!</item>
+            </item>
+        </data>
+    </command>
+</config>

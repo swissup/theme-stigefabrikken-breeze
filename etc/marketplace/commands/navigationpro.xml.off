@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+    <command class="Swissup\Navigationpro\Installer\Command\Menu" module="Swissup_Navigationpro">
+        <data>
+            <item>
+                <item name="activate">1</item>
+                <item name="type" type="const">Swissup\Navigationpro\Model\Config\Source\BuilderType::TYPE_MEGAMENU</item>
+                <item name="theme_id" helper="Swissup\Marketplace\Installer\Helper\Theme::getId">
+                    <param name="theme">frontend/Swissup/argentobreeze-chic</param>
+                </item>
+                <item name="settings">
+                    <item name="identifier">argentobreeze_chic_topmenu</item>
+                    <item name="dropdown_settings">
+                        <item name="level1">
+                            <item name="width">xlarge</item>
+                            <item name="position">center</item>
+                            <item name="layout">
+                                <item>
+                                    <item name="type">children</item>
+                                    <item name="size">8</item>
+                                    <item name="columns_count">3</item>
+                                    <item name="levels_per_dropdown">2</item>
+                                </item>
+                                <item>
+                                    <item name="type">html</item>
+                                    <item name="size">4</item>
+                                    <item name="display_mode">if_has_children</item>
+                                    <item name="content"><![CDATA[<div style="overflow: hidden; max-height: 400px;">
+    {{depend remote_entity.thumbnail}}
+        <a href="{{var remote_entity.url}}" title="{{var remote_entity.name}}">
+            <img class="xs-hide sm-hide md-show" src="{{media url=''}}/catalog/category/{{var remote_entity.thumbnail}}" loading="lazy" alt="{{var remote_entity.name}}"/>
+        </a>
+    {{/depend}}
+</div>]]></item>
+                                </item>
+                            </item>
+                        </item>
+                        <item name="level2">
+                            <item name="layout">
+                                <item>
+                                    <item name="type">children</item>
+                                    <item name="max_children_count">7</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+                <item name="items">
+                    <item name="home" type="boolean">false</item>
+                    <item name="contacts" type="boolean">false</item>
+                </item>
+            </item>
+        </data>
+    </command>
+</config>

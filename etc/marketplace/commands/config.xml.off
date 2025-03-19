@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<config>
+    <command class="Swissup\Marketplace\Installer\Command\Config">
+        <data>
+            <item name="design/theme/theme_id" helper="Swissup\Marketplace\Installer\Helper\Theme::getId">
+                <param name="theme">frontend/Swissup/argentobreeze-chic</param>
+            </item>
+            <item name="design/head/includes">
+                <item name="remove"><![CDATA[<link  rel="stylesheet" type="text/css"  media="all" href="{{MEDIA_URL}}styles.css" />]]></item>
+            </item>
+            <item name="ajaxpro/main/enabled">1</item>
+            <item name="ajaxpro/main/cart">1</item>
+            <item name="ajaxpro/main/cartHandle">ajaxpro_popup_minicart</item>
+            <item name="ajaxpro/main/cartType">slide</item>
+            <item name="ajaxpro/main/modalCloseTimeout">3600</item>
+            <item name="ajaxpro/main/product">1</item>
+            <item name="ajaxpro/main/quickView">1</item>
+            <item name="ajaxpro/main/floatingCart">0</item>
+            <item name="ajaxsearch/main/enable">1</item>
+            <item name="ajaxsearch/main/limit">60</item>
+            <item name="ajaxsearch/folded/enable">1</item>
+            <item name="ajaxsearch/design/layout">grid</item>
+            <item name="ajaxsearch/product/limit">21</item>
+            <item name="ajaxsearch/category/filter">0</item>
+            <item name="ajaxsearch/autocomplete/show_on_focus">0</item>
+            <item name="askit/general/gravatar">0</item>
+            <item name="hovergallery/general/enabled">1</item>
+            <item name="quantityswitcher/general/enabled">1</item>
+            <item name="quantityswitcher/general/switcher_type">dropdown</item>
+            <item name="prolabels/on_sale/product/active">1</item>
+            <item name="prolabels/on_sale/product/position">top-left</item>
+            <item name="prolabels/on_sale/product/text">-#discount_percent#%</item>
+            <item name="prolabels/on_sale/product/custom"><![CDATA[background: linear-gradient(124deg, #ddf8e9 5.09%, #c6bdfe 99.43%);
+border-radius:999px;
+color: #000;
+font-size: 14px;
+font-weight: 600;
+margin: 18px 0 6px 20px;
+height: 30px;
+padding: 4px 12px;]]></item>
+            <item name="prolabels/on_sale/category/active">1</item>
+            <item name="prolabels/on_sale/category/position">top-left</item>
+            <item name="prolabels/on_sale/category/text">-#discount_percent#%</item>
+            <item name="prolabels/on_sale/category/custom"><![CDATA[background: linear-gradient(124deg, #ddf8e9 5.09%, #c6bdfe 99.43%);
+border-radius:999px;
+color: #000;
+font-size: 12px;
+font-weight: 600;
+margin: 12px 0 6px 16px;
+height: 26px;
+padding: 4px 10px;
+]]></item>
+            <item name="prolabels/is_new/product/active">1</item>
+            <item name="prolabels/is_new/product/position">top-left</item>
+            <item name="prolabels/is_new/product/text">New</item>
+            <item name="prolabels/is_new/product/custom"><![CDATA[border-radius: 999px;
+background: linear-gradient(117deg, #B9EDFD 20.27%, #B9F8C7 134.96%);
+color: #000;
+font-size: 14px;
+font-weight: 600;
+margin: 18px 0 6px 20px;
+height: 30px;
+padding: 4px 12px;]]></item>
+            <item name="prolabels/is_new/category/active">1</item>
+            <item name="prolabels/is_new/category/position">top-left</item>
+            <item name="prolabels/is_new/category/text">New</item>
+            <item name="prolabels/is_new/category/custom"><![CDATA[border-radius: 999px;
+background: linear-gradient(117deg, #B9EDFD 20.27%, #B9F8C7 134.96%);
+color: #000;
+font-size: 12px;
+font-weight: 600;
+margin: 12px 0 6px 16px;
+height: 26px;
+padding: 4px 10px;
+]]></item>
+            <item name="richsnippets/general/enabled">1</item>
+            <item name="swissup_fontawesome/general/enabled">0</item>
+            <item name="swissup_easytabs/product_tabs/layout">expanded</item>
+            <item name="soldtogether/order/enabled">1</item>
+            <item name="soldtogether/order/random">1</item>
+            <item name="soldtogether/order/layout">amazon-stripe</item>
+            <item name="soldtogether/order/count">4</item>
+            <item name="soldtogether/customer/enabled">0</item>
+            <item name="soldtogether/customer/random">1</item>
+            <item name="soldtogether/customer/count">4</item>
+            <item name="testimonials/form/layout">1column</item>
+            <item name="testimonials/list/image_width">180</item>
+            <item name="testimonials/list/image_height">180</item>
+        </data>
+    </command>
+</config>
