@@ -1,9 +1,7 @@
-@header-panel__background: @color-almost-white ;
-
 .header.panel {
     justify-content: space-between;
     .header-panel-offers {
-        stong { font-weight: 600; }
+        strong { font-weight: 600; }
     }
     .header-panel-links {
         ul {
@@ -11,11 +9,27 @@
             display: flex;
             margin: 0;
             padding: 0;
+            align-items: center;
 
             li {
-                margin-right: 20px;
+
                 margin-top: 0;
                 margin-bottom: 0;
+                display: flex;
+                align-items: center;
+                
+                &:not(:last-child) {
+                    margin-right: 10px;
+                    
+                    &::after {
+                        content: '';
+                        display: inline-block;
+                        height: 14px;
+                        width: 1px;
+                        background-color: @color-border-gray;
+                        margin-left: 10px;
+                    }
+                }
                 
                 a { color: @color-gray; }
             }
@@ -37,13 +51,102 @@
         transform: translateX(-50%);
         width: 30%; 
     }
+
+    .chat-wrapper,
     .switcher .account-dropdown,
     .minicart-wrapper {
         .action{
             &::before {
                 -webkit-mask-size: @header-actions-icon__width @header-actions-icon__height;
                 background-color: @color-gray-icon;
+                margin: 0 auto;
             }
         }
+    }
+    .chat-wrapper{
+        a.action{
+            &::before {
+                .breeze-icon(@icon-chat);
+                background-color: @color-gray-icon;
+            }
+        }
+    }
+    .chat-wrapper span,
+    .action.switcher-trigger > *,
+    .action.showcart .text {
+        overflow: visible;
+        clip: auto;
+        font-size: 12px;
+        font-weight: 400;
+        height: auto;
+        margin-top: 40px;
+        width: 100%;
+        text-align: center;
+    }
+    .chat-wrapper,
+    .switcher.switcher-account,
+    .minicart-wrapper {
+        width: 55px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+/*Top Benefits Banner */
+.top-container {
+    max-width: none;
+    border-bottom: 1px solid @color-border-gray;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
+
+    .easybanner-banner div.benefits-wrapper {
+        display: flex;
+        justify-content: space-between;
+        color: @color-red;
+        max-width: @container__max-width; 
+        margin: 0 auto;
+        
+        // Style for separator elements
+        div.separator {
+            height: 20px;
+            width: 1px;
+            background-color: @color-border-gray;
+            margin: 0 15px;
+        }
+        
+        // Add checkmark before each content element
+        .content {
+            position: relative;
+            padding-left: 20px;
+            
+            &::before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                color: @color-red;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// Add the panel wrapper background with responsive proportions
+.panel.wrapper {
+    // Default for narrower screens (60-40 split)
+    background: linear-gradient(120deg, 
+    @color-almost-white 0%, 
+    @color-almost-white 60%,
+    @color-header-panel-accent 60%, 
+    @color-header-panel-accent 100%
+    );
+    
+    // Wide screens (70-30 split)
+    @media (min-width: 1024px) {
+        background: linear-gradient(120deg, 
+            @color-almost-white 0%, 
+            @color-almost-white 65%,
+            @color-header-panel-accent 65%, 
+            @color-header-panel-accent 100%
+        );
     }
 }

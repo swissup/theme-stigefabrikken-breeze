@@ -7,7 +7,7 @@
     #search_mini_form { 
         .control {
             .input-text {
-                width: 480px;
+                width: 380px;
                 height: 52px;
                 border-radius: 50px;
                 background-color: @color-almost-white;
@@ -26,6 +26,21 @@
                     background-color: @color-white;
                 }
             }
+        }
+    }
+    .header.content .block.block-search {
+        left: 65%;
+    }
+    @media (min-width: 1024px) {
+        #search_mini_form { 
+            .control {
+                .input-text {
+                    width: 480px;
+                }
+            }
+        }
+        .header.content .block.block-search {
+            left: 50%;
         }
     }
 }
