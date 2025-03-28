@@ -17,7 +17,7 @@
         </conditions>
         <!-- <include path="commands/config.xml"/> -->
         <include path="commands/cms_block.xml"/>
-        <include path="commands/cms_page.xml"/>
+        <!-- <include path="commands/cms_page.xml"/> -->
         <!-- <include path="commands/easytabs.xml"/>
         <include path="commands/navigationpro.xml"/>
         <include path="commands/testimonials.xml"/>

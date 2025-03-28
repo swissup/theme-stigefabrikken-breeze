@@ -2,5 +2,4 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
     <title>Stigefabrikken Breeze</title>
     <parent>Swissup/breeze-blank</parent>
-
 </theme>

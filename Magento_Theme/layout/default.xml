@@ -33,9 +33,41 @@
                 </arguments>
             </block>
         </referenceContainer>
-        
-        <!-- Remove store switcher from header panel -->
+
+        <!-- Footer -->
+
+        <referenceContainer name="footer-middle">
+            <block class="Magento\Cms\Block\Block" name="footer_content" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_content</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <move element="footer" destination="footer-bottom"/>
+
+        <referenceBlock name="breeze.scrollReveal">
+            <arguments>
+                <argument name="enabled" xsi:type="boolean">true</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- Add cms block footer_bottom_content to footer-bottom container -->
+        <referenceContainer name="footer-bottom">
+            <block class="Magento\Cms\Block\Block" name="footer_bottom_content" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_bottom_content</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+       
+        <!-- <move element="store_language" destination="footer-middle"/> -->
         <referenceBlock name="store_language" remove="true" />
+        <referenceBlock name="form.subscribe" remove="true"/>
+
+        <!-- Remove footer links -->
+        <referenceBlock name="footer_links" remove="true" />
+        <!--remove footer copyright-->
+        <referenceBlock name="copyright" remove="true" />
         <!-- Remove wishlist sidebar -->
         <referenceBlock name="header.wishlist" remove="true" />
     </body>

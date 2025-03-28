@@ -24,19 +24,20 @@
                 </item>
             </item>
             <item>
-                <item name="title">footer_top_content</item>
-                <item name="identifier">footer_top_content</item>
-                <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
-                    <param name="path" type="path">content/cms_block/footer_top_content.html</param>
-                </item>
-            </item>
-            <item>
                 <item name="title">footer_content</item>
                 <item name="identifier">footer_content</item>
                 <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
                     <param name="path" type="path">content/cms_block/footer_content.html</param>
                 </item>
             </item>
+            <!-- <item>
+                <item name="title">footer_top_content</item>
+                <item name="identifier">footer_top_content</item>
+                <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
+                    <param name="path" type="path">content/cms_block/footer_top_content.html</param>
+                </item>
+            </item>
+            
             <item>
                 <item name="title">footer_bottom_content</item>
                 <item name="identifier">footer_bottom_content</item>
@@ -71,7 +72,7 @@
                 <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
                     <param name="path" type="path">content/cms_block/contact_bottom.html</param>
                 </item>
-            </item>
+            </item> -->
         </data>
     </command>
 </config>
