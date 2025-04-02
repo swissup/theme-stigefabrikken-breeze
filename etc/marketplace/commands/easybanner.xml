@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+    <command class="Swissup\Easybanner\Installer\Command\Banner" module="Swissup_Easybanner">
+        <data>
+            <item>
+                <item name="name">content_top</item>
+                <item name="limit">1</item>
+                <item name="additional_css_class">hidden-xs</item>
+                <item name="container">top.container</item>
+                <item name="position">before="-"</item>
+                <item name="banners">
+                    <item>
+                        <item name="identifier">top_benefits</item>
+                        <item name="title">Top benefits</item>
+                        <item name="url">benefits</item>
+                        <item name="mode">html</item>
+                        <item name="html" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
+                            <param name="path" type="path">content/easybanner/benefits.html</param>
+                        </item>
+                    </item>
+                    
+                </item>
+            </item>            
+        </data>
+    </command>
+</config>

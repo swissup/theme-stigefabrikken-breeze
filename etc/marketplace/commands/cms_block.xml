@@ -30,6 +30,13 @@
                     <param name="path" type="path">content/cms_block/footer_content.html</param>
                 </item>
             </item>
+            <item>
+                <item name="title">footer_bottom_content</item>
+                <item name="identifier">footer_bottom_content</item>
+                <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
+                    <param name="path" type="path">content/cms_block/footer_bottom_content.html</param>
+                </item>
+            </item>
             <!-- <item>
                 <item name="title">footer_top_content</item>
                 <item name="identifier">footer_top_content</item>
@@ -38,13 +45,6 @@
                 </item>
             </item>
             
-            <item>
-                <item name="title">footer_bottom_content</item>
-                <item name="identifier">footer_bottom_content</item>
-                <item name="content" helper="Swissup\Marketplace\Installer\Helper\Renderer::render">
-                    <param name="path" type="path">content/cms_block/footer_bottom_content.html</param>
-                </item>
-            </item>
             <item>
                 <item name="title">sizing_chart</item>
                 <item name="identifier">sizing_chart</item>

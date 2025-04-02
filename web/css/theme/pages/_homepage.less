@@ -5,4 +5,38 @@
         margin-bottom: 10px;
         gap: 10px;
     }
+    /* History banner */
+    .pagebuilder-column-group.our-history {
+        border-radius: 15px !important;
+        h2 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    /* Featured brands */
+    .featured-brands {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0;
+            list-style-type: none;
+            align-items: center; /* Center the items vertically */
+            li {
+                flex: 0 0 16.66%; /* 100% / 6 items = 16.66% */
+                box-sizing: border-box;
+                padding: 10px;
+                text-align: center;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .action.button {
+            font-weight: 600;
+            border-radius: 5px;;
+        }
+    }
 }
