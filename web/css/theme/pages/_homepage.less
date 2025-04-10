@@ -5,6 +5,28 @@
         margin-bottom: 10px;
         gap: 10px;
     }
+    /*EasyCatalogImages section*/
+    .easycatalogimg {
+        .parent-category-wrapper {
+            background-color: @color-footer-light-gray;
+            border-radius: 6px;
+            .category-name.parent-category {
+                text-align: center;
+                padding: 30px 0;
+                font-size: 16px;
+                font-weight: 500;
+                &::after {
+                    .breeze-icon(@icon-right-caret, 14px, 12px);
+                    color: @color-red;
+                    margin-left: 5px;                    
+                    display: inline-block;
+                    width: 14px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+
     /* History banner */
     .pagebuilder-column-group.our-history {
         border-radius: 15px !important;
@@ -21,7 +43,7 @@
                 li {
                     .swatch-attribute,
                     .actions-secondary {
-                     display: none;
+                        display: none;
                     }
                 }
             }
