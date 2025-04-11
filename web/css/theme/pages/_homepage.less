@@ -7,6 +7,8 @@
     }
     /*EasyCatalogImages section*/
     .easycatalogimg {
+        position: relative;
+
         .parent-category-wrapper {
             background-color: @color-footer-light-gray;
             border-radius: 6px;
@@ -27,6 +29,33 @@
         }
     }
 
+    .breeze-carousel {
+        .easycatalogimg {
+            position: relative;
+            .item {
+                flex-shrink: 0;
+                width: ~"calc((100% - 4px * 2) / 1.2)";
+                @media @media-xs {
+                    width: ~"calc((100% - 4px * 2) / 1.5)";
+                }
+                @media @media-sm {
+                    width: ~"calc((100% - 4px * 2) / 3.2)";
+                }
+                @media @media-md {
+                    width: ~"calc((100% - 4px * 2) / 5)";
+                }
+            }
+        }
+        .easycatalogimg-grid {
+
+            flex-wrap: nowrap;
+            &:not(.slick-list) {
+                overflow: hidden;
+            }
+        }
+    }
+
+
     /* History banner */
     .pagebuilder-column-group.our-history {
         border-radius: 15px !important;
@@ -34,20 +63,23 @@
             font-size: 2.3rem;
             margin-bottom: 10px;
         }
-    }
-
-    /*block-highlight highlight-carousel*/
-    .block-highlight.highlight-carousel {
-        .block-content {
-            .products.product-items {
-                li {
-                    .swatch-attribute,
-                    .actions-secondary {
-                        display: none;
-                    }
-                }
+        a.button.action.primary {
+            border-radius: 6px;
+            font-weight: 600;
+            &::after {
+                .breeze-icon(@icon-right-caret, 14px, 12px);
+                color: @color-white;
+                margin-left: 5px;
+                display: inline-block;
+                width: 14px;
+                height: 12px;
             }
         }
+    }
+
+    /*Block Highlight carousel*/
+    .block-highlight.highlight-carousel {
+     
     }
 
     /* Featured brands */
@@ -86,4 +118,80 @@
             margin-left: 20px;
         }
     }
+    .testimonials-slider {
+        figure.testimonial {
+            blockquote {
+                filter: none;
+                border: 1px solid @color-border-gray;
+                border-radius: 6px;
+                padding: 30px 30px 60px;
+                .rating{
+                    margin-bottom: 30px;
+                }
+                .testimonial-message {
+                    font-size: 20px;
+                }
+                &::after,
+                &::before {
+                    display: none;
+                }
+            }
+            .rating-result::before, 
+            .rating-result > span::before {                
+                color: @color-red;
+            }
+            .arrow {
+                display: none;
+            }
+            .author {
+                bottom: 25px;
+                padding: 0 30px;
+                h5 {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    /*Swiper slider*/
+    .block-highlight.highlight-carousel .carousel-container,
+    .swiper-container { padding-bottom: 80px; }
+
+    .easycatalogimg-listing.slick-list {padding-bottom: 50px;}
+
+    .slick-arrow,
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: @color-red;
+        border: 1px solid @color-border-gray;
+        border-radius: 4px;
+        width: 93px;
+        height: 46px;
+        position: absolute;
+        bottom: 35px;
+        top: auto;
+        background-size: 10px;
+        
+        &:after {
+            font-size: 16px;
+        }
+    }
+    .slick-arrow {
+        bottom: 0;
+        border: 1px solid @color-border-gray !important;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slick-next,
+    .swiper-button-next {
+        right: 0;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDggMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMC4wMDAyNDQxNDFMOCA4LjUwMTEwTDAgMTcuMDAyVjEyLjYwMTdMMy45MzgyMyA4LjUwMTEwTDAgNC40MDA0OVYwLjAwMDI0NDE0MVoiIGZpbGw9IiM4QjM2MzkiLz48L3N2Zz4=');
+    }
+    .slick-prev,
+    .swiper-button-prev {
+        right: 100px;
+        left: auto;        
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDggMTciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTggMC4wMDAyNDQxNDFMMCw4LjUwMTFMOCAxNy4wMDJWMTIuNjAxN0w0LjA2MTc3LDguNTAxMUw4LDQuNDAwNDlWMC4wMDAyNDQxNDFaIiBmaWxsPSIjOEIzNjM5Ii8+PC9zdmc+');
+    }
+    .slick-next::before, .slick-prev::before {display: none;}
 }

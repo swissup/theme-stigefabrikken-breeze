@@ -1,0 +1,43 @@
+& when (@critical) {
+    .products.product-items {
+        li {
+            .swatch-attribute,
+            .actions-secondary {
+                display: none;
+            }
+            &.product-item {
+                border: 1px solid @color-border-gray;
+                border-radius: 6px;
+                overflow: hidden;
+
+                .product-item-info {
+                    .product-item-photo {
+                        margin: 20px;
+                    }
+                    .product-item-details {
+                        text-align: center;
+                        justify-content: flex-end;
+                        .product-item-name {
+                            margin: 0 20px;
+                            .product-item-link {
+                                font-weight: 400;
+                            }
+                        }
+                        .product-item-inner {
+                            .actions-primary{
+                                width: 100%;
+                                .action.tocart.primary {
+                                    width: 100%;
+                                    border-radius: 0 0 6px 6px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
